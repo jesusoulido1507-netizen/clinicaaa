@@ -404,6 +404,74 @@
   .author-name { font-size: 13px; font-weight: 500; }
   .author-role { font-size: 11px; color: var(--text-muted); }
 
+
+  /* ── TRUST ── */
+  .trust-strip {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 2.5rem 0;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .trust-item {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    background: var(--white);
+  }
+
+  .trust-item strong { color: var(--text); font-weight: 500; }
+
+  /* ── PLANS ── */
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .plan-card {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    background: var(--white);
+  }
+
+  .plan-name { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .plan-price { font-size: 25px; color: var(--teal-600); font-weight: 500; margin-bottom: 10px; }
+  .plan-price span { font-size: 12px; color: var(--text-muted); font-weight: 400; }
+  .plan-list { list-style: none; display: grid; gap: 7px; margin-bottom: 1rem; }
+  .plan-list li { font-size: 12.5px; color: var(--text-muted); }
+
+  /* ── FAQ ── */
+  .faq-grid {
+    display: grid;
+    gap: 10px;
+  }
+
+  .faq-item {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.95rem 1rem;
+    background: var(--white);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 500;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item p { margin-top: 0.6rem; font-size: 12.5px; color: var(--text-muted); line-height: 1.7; }
+
   /* ── CTA ── */
   .cta-section {
     margin: 0 2.5rem 4rem;
@@ -475,6 +543,7 @@
     nav { padding: 0 1.25rem; }
     .nav-links { display: none; }
     .section { padding: 3rem 1.25rem; }
+    .trust-strip { padding: 1rem 1.25rem 0; }
     .cta-section { margin: 0 1.25rem 3rem; padding: 2rem; }
     footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
   }
@@ -497,6 +566,8 @@
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
     <a href="#equipo">Equipo</a>
+    <a href="#planes">Planes</a>
+    <a href="#faq">FAQ</a>
     <a href="#contacto">Contacto</a>
   </div>
   <a href="#contacto" class="nav-cta">Agendar cita</a>
@@ -544,6 +615,16 @@
   </div>
 </div>
 
+<!-- CONFIANZA -->
+<section class="trust-strip">
+  <div class="trust-grid">
+    <div class="trust-item"><strong>Valoración inicial guiada</strong><br>Incluye objetivos clínicos y deportivos para arrancar con enfoque claro.</div>
+    <div class="trust-item"><strong>Protocolos basados en evidencia</strong><br>Seguimos guías actuales para dolor, lesión y readaptación funcional.</div>
+    <div class="trust-item"><strong>Agenda simple por WhatsApp</strong><br>Confirmación rápida, recordatorios y seguimiento posterior a consulta.</div>
+    <div class="trust-item"><strong>Plan en casa</strong><br>Ejercicios y hábitos semanales para acelerar tu progreso entre sesiones.</div>
+  </div>
+</section>
+
 <!-- SERVICIOS -->
 <section class="section" id="servicios">
   <div class="section-header">
@@ -590,7 +671,50 @@
   </div>
 </section>
 
+
+
 <hr class="divider">
+
+<!-- PLANES -->
+<section class="section" id="planes">
+  <div class="section-header">
+    <div class="section-tag">Planes</div>
+    <div class="section-title">Programas más solicitados</div>
+    <div class="section-sub">Tomamos como referencia lo que mejor funciona en clínicas similares: paquetes claros, seguimiento y agendado fácil.</div>
+  </div>
+  <div class="plans-grid">
+    <article class="plan-card">
+      <div class="plan-name">Inicio Activo</div>
+      <div class="plan-price">1 sesión <span>/ valoración</span></div>
+      <ul class="plan-list">
+        <li>• Diagnóstico funcional y nutricional</li>
+        <li>• Objetivos a 4 semanas</li>
+        <li>• Recomendaciones iniciales para casa</li>
+      </ul>
+      <a href="#contacto" class="btn-ghost">Agendar</a>
+    </article>
+    <article class="plan-card">
+      <div class="plan-name">Rehab + Nutrición</div>
+      <div class="plan-price">4 sesiones <span>/ mensual</span></div>
+      <ul class="plan-list">
+        <li>• 2 sesiones fisioterapia</li>
+        <li>• 2 seguimientos nutricionales</li>
+        <li>• Ajustes semanales por progreso</li>
+      </ul>
+      <a href="#contacto" class="btn-ghost">Solicitar plan</a>
+    </article>
+    <article class="plan-card">
+      <div class="plan-name">Equipo Deportivo</div>
+      <div class="plan-price">Plan grupal <span>/ por temporada</span></div>
+      <ul class="plan-list">
+        <li>• Valoración de plantel</li>
+        <li>• Protocolos por posición y carga</li>
+        <li>• Reporte mensual para entrenador</li>
+      </ul>
+      <a href="#contacto" class="btn-ghost">Cotizar equipo</a>
+    </article>
+  </div>
+</section>
 
 <!-- PROCESO -->
 <section class="section" id="proceso">
@@ -721,6 +845,37 @@
   </div>
 </section>
 
+
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-header">
+    <div class="section-tag">FAQ</div>
+    <div class="section-title">Preguntas frecuentes</div>
+    <div class="section-sub">Esta sección se agregó porque en sitios de clínicas similares suele mejorar la confianza y acelerar la reserva.</div>
+  </div>
+  <div class="faq-grid">
+    <details class="faq-item" open>
+      <summary>¿Cómo agendo mi primera cita?</summary>
+      <p>Puedes escribirnos por WhatsApp y te compartimos horarios disponibles el mismo día. También confirmamos duración de sesión y lo que debes llevar.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Manejan cancelaciones o reprogramaciones?</summary>
+      <p>Sí. Te recomendamos avisar con al menos 24 horas para mover tu sesión sin afectar tu plan de seguimiento.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Atienden solo atletas?</summary>
+      <p>No. Atendemos pacientes con dolor crónico, recuperación postquirúrgica y personas que quieren mejorar su salud metabólica y movilidad diaria.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Incluyen plan para casa?</summary>
+      <p>Sí. En cada etapa te llevas ejercicios, pautas de carga y recomendaciones de nutrición para sostener resultados entre consultas.</p>
+    </details>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-section" id="contacto">
   <h2>Comienza tu camino hacia el<br>rendimiento y bienestar hoy</h2>
@@ -729,7 +884,7 @@
   <div style="margin-top:1.5rem;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
     <a href="tel:+526863053748" style="color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;">📞 686-305-3748</a>
     <a href="https://www.instagram.com/mc.samuelzayas?igsh=MTZ1NjUwMmNvMzlrZw==" target="_blank" style="color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;">📸 @mc.samuelzayas</a>
-    <a href="#" style="color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;">📍 [Dirección del consultorio]</a>
+    <a href="#" style="color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;">📍 Mexicali, B.C. · ubicación exacta al confirmar cita</a>
   </div>
 </div>
 
@@ -747,4 +902,10 @@
     <a href="#">Aviso de privacidad</a>
     <a href="https://www.instagram.com/mc.samuelzayas?igsh=MTZ1NjUwMmNvMzlrZw==" target="_blank">Instagram</a>
     <a href="https://wa.me/526863053748" target="_blank">WhatsApp</a>
-    <a href="#
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="footer-copy">© 2026 Prime Athlete · Mexicali, B.C.</div>
+</footer>
+
+</body>
+</html>
