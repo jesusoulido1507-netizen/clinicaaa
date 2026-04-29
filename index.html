@@ -101,11 +101,25 @@
     .section-title h2{font-size:clamp(32px,5vw,44px);color:var(--morado);margin-top:6px}
     .section-title p{color:var(--gris);margin-top:10px;font-size:18px}
 
-    .services{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
+    .services {
+  width: min(1120px, 92%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
 
     .card{
       background:white;
